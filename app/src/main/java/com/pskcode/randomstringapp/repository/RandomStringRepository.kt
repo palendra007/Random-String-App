@@ -25,7 +25,7 @@ class RandomStringRepository(private val context: Context) {
             .build()
 
         val args = Bundle().apply {
-            putInt(ContentResolver.QUERY_ARG_LIMIT, 1)
+            putInt(ContentResolver.QUERY_ARG_LIMIT, length)
         }
 
         return withContext(Dispatchers.IO) {
